@@ -9,15 +9,15 @@ export class Country extends BaseEntity {
   id: string;
 
   @Field()
-  @Column()
+  @Column({ unique: true })
   name: string;
 
   @Field()
-  @Column({ length: 2 })
+  @Column({ length: 2, unique: true })
   code: string;
 
   @Field()
-  @Column()
+  @Column({ length: 1, unique: true })
   emoji: string;
 
   @Field()
